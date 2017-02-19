@@ -1,0 +1,8 @@
+kodi
+emulationstation
+emulationstation-theme-simple
+mednafen
+dolphin-emu
+mupen64plus
+zsnes
+desmume
