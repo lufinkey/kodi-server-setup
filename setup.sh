@@ -127,5 +127,15 @@ fi
 # Upgrade packages
 apt-get upgrade
 
+# Set autologin user and session
+autologin_conf=$(
+	cat <<EOF
+[SeatDefaults]
+user-session=kodi-openbox
+autologin-user=${username}
+EOF
+)
+echo "$autologin_conf" > /etc/lightdm/lightdm.conf.d/50-autologin.conf
+
 # Cleanup
 rm -rf "$tmp_dir"
