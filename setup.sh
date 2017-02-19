@@ -131,8 +131,8 @@ apt-get upgrade
 autologin_conf=$(
 	cat <<EOF
 [SeatDefaults]
-user-session=kodi-openbox
 autologin-user=${username}
+autologin-session=kodi-openbox
 EOF
 )
 echo "$autologin_conf" > /etc/lightdm/lightdm.conf.d/50-autologin.conf
