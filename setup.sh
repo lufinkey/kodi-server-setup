@@ -112,6 +112,7 @@ done
 apt-get update
 
 
+
 # Install user files
 cp -r userfiles "$tmp_dir/userfiles"
 chown -R "$username:$username" "$tmp_dir/userfiles"
@@ -132,6 +133,7 @@ then
 fi
 
 
+
 # Install post-setup packages
 apt-get install -y $(cat "lists/post-setup-install.txt")
 # Download/install my repos
@@ -149,41 +151,10 @@ cd "$full_base_dir"
 
 # Install packages with prompts
 echo ""
-echo "The following packages will have install prompts"
+echo "The next packages are going to have install prompts"
 read -n 1 -s -p "Press any key to continue..."
 echo ""
 apt-get install $(cat "lists/prompt-install.txt")
-
-# Install optional packages?
-echo ""
-echo "The following packages are optional:"
-cat "lists/optional-install.txt"
-echo ""
-optional_choice=
-while [ "$optional_choice" != "y" ] && [ "$optional_choice" != "n" ] && [ "$optional_choice" != "c" ]
-do
-	read -p "Should these be installed? (y=yes, n=no, c=choose): " optional_choice
-done
-if [ "$optional_choice" == "y" ]
-then
-	apt-get install $(cat "lists/optional-install.txt")
-elif [ "$optional_choice" == "c" ]
-then
-	optional_packages=($(cat "lists/optional-install.txt"))
-	for package in "${optional_packages[@]}"
-	do
-		echo ""
-		package_choice=
-		while [ "$package_choice" != "y" ] && [ "$package_choice" != "n" ]
-		do
-			read -p "install $package? (y/n): " package_choice
-		done
-		if [ "$package_choice" == "y" ]
-		then
-			apt-get install "$package"
-		fi
-	done
-fi
 
 # Set autologin user and session
 autologin_conf=$(
