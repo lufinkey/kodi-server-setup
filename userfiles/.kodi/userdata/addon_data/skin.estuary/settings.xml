@@ -1,0 +1,8 @@
+<settings>
+    <setting id="HomeMenuNoPicturesButton" type="bool">true</setting>
+    <setting id="HomeMenuNoMusicVideoButton" type="bool">true</setting>
+    <setting id="HomeMenuNoTVButton" type="bool">true</setting>
+    <setting id="HomeMenuNoRadioButton" type="bool">true</setting>
+    <setting id="HomeMenuNoVideosButton" type="bool">true</setting>
+    <setting id="HomeMenuNoFavButton" type="bool">true</setting>
+</settings>
