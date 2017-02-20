@@ -3,4 +3,4 @@ ppa:team-xbmc/ppa
 ppa:emulationstation/ppa
 ppa:ubuntu-wine/ppa
 ppa:random-stuff/ppa
-
+ppa:gregory-hainaut/pcsx2.official.ppa
