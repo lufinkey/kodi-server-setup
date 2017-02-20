@@ -1,5 +1,3 @@
 #!/bin/bash
-export DISPLAY=:0
 xsetroot -solid '#000000'
 xrandr --output VGA-0 --primary --auto
-
