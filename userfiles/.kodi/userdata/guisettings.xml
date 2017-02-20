@@ -1,0 +1,18 @@
+<settings>
+    <addons>
+        <unknownsources>true</unknownsources>
+    </addons>
+    <filelists>
+        <showparentdiritems default="true">false</showparentdiritems>
+    </filelists>
+    <powermanagement>
+        <displaysoff>10</displaysoff>
+    </powermanagement>
+    <videoscreen>
+        <blankdisplays>true</blankdisplays>
+    </videoscreen>
+    <weather>
+        <addon>weather.yahoo</addon>
+        <currentlocation default="true">1</currentlocation>
+    </weather>
+</settings>
