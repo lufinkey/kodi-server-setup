@@ -4,4 +4,5 @@ http://redirect.superrepo.org/v7/addons/plugin.program.advanced.launcher/plugin.
 http://redirect.superrepo.org/v7/addons/repository.exodus/repository.exodus-1.0.1.zip
 http://redirect.superrepo.org/v7/addons/plugin.video.kisscartoon/plugin.video.kisscartoon-0.9.16.zip
 http://redirect.superrepo.org/v7/addons/plugin.video.kissanime/plugin.video.kissanime-0.9.19.zip
+https://offshoregit.com/exodus/plugin.video.exodus/plugin.video.exodus-3.0.5.zip
 

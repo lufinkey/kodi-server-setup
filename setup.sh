@@ -165,6 +165,16 @@ autologin-session=kodi-openbox
 EOF
 )
 echo "$autologin_conf" > /etc/lightdm/lightdm.conf.d/50-autologin.conf
+# Copy kodi addons to Downloads folder
+addon_urls=$(cat < "lists/kodi-addons.txt")
+kodi_addon_downloads="$userhome/Downloads/kodi-addons"
+mkdir -p "$kodi_addon_downloads"
+cd "$kodi_addon_downloads"
+for addon_url in $addon_urls
+do
+	wget -N "$addon_url"
+done
+cd "$full_base_dir"
 
 # Run profile post-setup script
 if [ -n "$profile" ] && [ -f "profiles/$profile/post-setup.sh" ]
@@ -177,4 +187,8 @@ apt-get upgrade
 
 # Cleanup
 rm -rf "$tmp_dir"
+
+
+echo "Setup is finished!"
+echo "Kodi addons have been downloaded to your home directory's download folder"
 
