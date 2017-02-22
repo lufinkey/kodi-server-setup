@@ -9,4 +9,5 @@ desmume
 pcsx2
 unclutter
 pavucontrol
+tightvncserver
 
