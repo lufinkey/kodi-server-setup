@@ -8,4 +8,5 @@ zsnes
 desmume
 pcsx2
 unclutter
+pavucontrol
 
