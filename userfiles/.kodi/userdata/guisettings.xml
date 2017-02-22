@@ -3,7 +3,7 @@
         <unknownsources>true</unknownsources>
     </addons>
     <filelists>
-        <showparentdiritems default="true">false</showparentdiritems>
+        <showparentdiritems>false</showparentdiritems>
     </filelists>
     <powermanagement>
         <displaysoff>10</displaysoff>
@@ -13,6 +13,6 @@
     </videoscreen>
     <weather>
         <addon>weather.yahoo</addon>
-        <currentlocation default="true">1</currentlocation>
+        <currentlocation>1</currentlocation>
     </weather>
 </settings>

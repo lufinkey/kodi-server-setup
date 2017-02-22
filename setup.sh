@@ -189,6 +189,7 @@ apt-get upgrade
 rm -rf "$tmp_dir"
 
 
+echo ""
 echo "Setup is finished!"
 echo "Kodi addons have been downloaded to your home directory's download folder"
 
