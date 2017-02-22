@@ -166,7 +166,7 @@ EOF
 )
 echo "$autologin_conf" > /etc/lightdm/lightdm.conf.d/50-autologin.conf
 # Copy kodi addons to Downloads folder
-addon_urls=$(cat < "lists/kodi-addons.txt")
+addon_urls=$(cat "lists/kodi-addons.txt")
 kodi_addon_downloads="$userhome/Downloads/kodi-addons"
 mkdir -p "$kodi_addon_downloads"
 cd "$kodi_addon_downloads"
