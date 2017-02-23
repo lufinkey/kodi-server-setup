@@ -10,4 +10,5 @@ pcsx2
 unclutter
 pavucontrol
 tightvncserver
+gedit
 
