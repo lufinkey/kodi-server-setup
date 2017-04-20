@@ -5,7 +5,19 @@ cd "$base_dir"
 full_base_dir="$PWD"
 
 # Setup ddclient
-cp -f miscfiles/ddclient.conf /etc/ddclient.conf
+read -p "Enter your Dynamic DNS password: " -s ddclient_pass
+ddclient_conf=$(
+	cat <<EOF
+
+use=web, web=dynamicdns.park-your-domain.com/getip
+protocol=namecheap
+server=dynamicdns.park-your-domain.com
+login=iwouldtotallyfuck.me
+password=${ddclient_pass}
+@
+EOF
+)
+echo "$ddclient_conf" > /etc/ddclient.conf
 chmod 600 /etc/ddclient.conf
 sudo apt-get install -y ddclient
 ddclient
@@ -20,3 +32,4 @@ display-setup-script=/etc/lightdm/scripts/lightdm-display-setup.sh
 EOF
 )
 echo "$display_setup_conf" > /etc/lightdm/lightdm.conf.d/51-display-setup.conf
+
