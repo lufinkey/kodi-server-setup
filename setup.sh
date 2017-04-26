@@ -176,6 +176,11 @@ do
 done
 cd "$full_base_dir"
 
+# Perform user setup
+cd "$userhome"
+sudo -u "$username" "./user-setup.sh"
+cd "$full_base_dir"
+
 # Run profile post-setup script
 if [ -n "$profile" ] && [ -f "profiles/$profile/post-setup.sh" ]
 then
