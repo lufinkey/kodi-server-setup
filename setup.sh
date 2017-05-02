@@ -178,7 +178,7 @@ cd "$full_base_dir"
 
 # Perform user setup
 cd "$userhome"
-sudo -u "$username" "./user-setup.sh"
+sudo -u "$username" "$full_base_dir/scripts/user-setup.sh"
 cd "$full_base_dir"
 
 # Run profile post-setup script
