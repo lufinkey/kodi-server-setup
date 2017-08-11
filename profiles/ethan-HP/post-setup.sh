@@ -14,7 +14,7 @@ protocol=namecheap
 server=dynamicdns.park-your-domain.com
 login=iwouldtotallyfuck.me
 password=${ddclient_pass}
-@
+@, rss-bridge
 EOF
 )
 echo "$ddclient_conf" > /etc/ddclient.conf
