@@ -34,7 +34,7 @@
 			<custompath></custompath>
 			<romext></romext>
 			<platform>Linux</platform>
-			<thumb></thumb>
+			<thumb>special://userdata/addon_data/plugin.program.advanced.launcher/thumbs/EmulationStation.png</thumb>
 			<fanart></fanart>
 			<genre></genre>
 			<release></release>
@@ -59,7 +59,7 @@
 			<custompath></custompath>
 			<romext></romext>
 			<platform>Linux</platform>
-			<thumb></thumb>
+			<thumb>special://userdata/addon_data/plugin.program.advanced.launcher/thumbs/Steam.png</thumb>
 			<fanart></fanart>
 			<genre></genre>
 			<release></release>
