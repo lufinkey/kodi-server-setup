@@ -1,8 +1,5 @@
 http://mirrors.kodi.tv/addons/krypton/weather.yahoo/weather.yahoo-4.3.1.zip
-http://srp.nu/krypton/all/superrepo.kodi.krypton.all-0.7.04.zip
-http://redirect.superrepo.org/v7/addons/plugin.program.advanced.launcher/plugin.program.advanced.launcher-2.6.1.zip
-http://redirect.superrepo.org/v7/addons/repository.exodus/repository.exodus-1.0.1.zip
-http://redirect.superrepo.org/v7/addons/plugin.video.kisscartoon/plugin.video.kisscartoon-0.9.16.zip
-http://redirect.superrepo.org/v7/addons/plugin.video.kissanime/plugin.video.kissanime-0.9.19.zip
-https://offshoregit.com/exodus/plugin.video.exodus/plugin.video.exodus-3.0.5.zip
+https://raw.githubusercontent.com/Colossal1/repository.colossus/master/repository.colossus/repository.colossus-999.999.6.zip
+https://github.com/Colossal1/plugin.video.covenant/archive/master.zip
+https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.program.advanced.launcher/plugin.program.advanced.launcher-2.6.1.zip
 
