@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function onkill
+{
+	kill -15 $gpid
+	wait $gpid
+}
+
+google-chrome "chrome-extension://bnmgbcehmiinmmlmepibeeflglhbhlea/window_extension.html" --start-fullscreen &
+gpid=$!
+trap "onkill" SIGINT SIGTERM SIGQUIT
+wait $gpid
+

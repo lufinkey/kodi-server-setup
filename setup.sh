@@ -103,6 +103,15 @@ apt-get install -y $(cat "lists/pre-setup-install.txt")
 # Remove unneeded packages
 apt-get -y remove $(cat "lists/to-be-removed.txt")
 
+# Install bin files
+cd bin
+bin_files=(*)
+cd "$full_base_dir"
+for bin_file in "${bin_files[@]}"
+do
+	cp -f "bin/$bin_file" "/usr/local/bin/$bin_file"
+done
+
 # Add Apt Keys
 apt_keys=($(cat "lists/apt-keys.txt"))
 for apt_key in "${apt_keys[@]}"
