@@ -165,15 +165,20 @@ autologin-session=kodi-openbox
 EOF
 )
 echo "$autologin_conf" > /etc/lightdm/lightdm.conf.d/50-autologin.conf
+
 # Copy kodi addons to Downloads folder
 addon_urls=$(cat "lists/kodi-addons.txt")
 kodi_addon_downloads="$userhome/Downloads/kodi-addons"
+rm -rf "$kodi_addon_downloads"
 mkdir -p "$kodi_addon_downloads"
 cd "$kodi_addon_downloads"
+addon_counter=0
 for addon_url in $addon_urls
 do
-	wget -N "$addon_url"
+	wget -N "$addon_url" -O "$addon_counter.zip"
+	addon_counter=$(($addon_counter+1))
 done
+chown -R "$username:$username" "$kodi_addon_downloads"
 cd "$full_base_dir"
 
 # Perform user setup
