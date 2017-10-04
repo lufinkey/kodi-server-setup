@@ -103,11 +103,25 @@ apt-get install -y $(cat "lists/pre-setup-install.txt")
 # Remove unneeded packages
 apt-get -y remove $(cat "lists/to-be-removed.txt")
 
+# Add Apt Keys
+apt_keys=($(cat "lists/apt-keys.txt"))
+for apt_key in "${apt_keys[@]}"
+do
+	wget -q -O - "$apt_key" | apt-key add -
+done
 # Install PPAs
 ppas=($(cat "lists/ppas.txt"))
 for ppa in "${ppas[@]}"
 do
 	add-apt-repository -y "$ppa"
+done
+# Install apt sources
+cd "apt-sources"
+apt_sources=(*)
+cd "$full_base_dir"
+for apt_source in "${apt_sources[@]}"
+do
+	cp -f "apt-sources/$apt_source" "/etc/apt/sources.list.d/$apt_source"
 done
 apt-get update
 
