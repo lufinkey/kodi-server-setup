@@ -10,21 +10,12 @@
 			<description></description>
 			<finished>false</finished>
 		</category>
-		<category>
-			<id>46979bb42fb0f2c8c29a622c8c3151a8</id>
-			<name>Games</name>
-			<thumb></thumb>
-			<fanart></fanart>
-			<genre></genre>
-			<description></description>
-			<finished>false</finished>
-		</category>
 	</categories>
 	<launchers>
 		<launcher>
 			<id>fea3d8ad077590d191fd7f87106b6a14</id>
 			<name>EmulationStation</name>
-			<category>46979bb42fb0f2c8c29a622c8c3151a8</category>
+			<category>default</category>
 			<application>/usr/bin/kodi-openbox-runprogram</application>
 			<args>emulationstation</args>
 			<rompath></rompath>
@@ -47,9 +38,34 @@
 			</roms>
 		</launcher>
 		<launcher>
+			<id>8ab9c80714bcd236f2e47f59a5d0c379</id>
+			<name>Google Cast</name>
+			<category>default</category>
+			<application>/usr/bin/kodi-openbox-runprogram</application>
+			<args>chrome-education-cast</args>
+			<rompath></rompath>
+			<thumbpath></thumbpath>
+			<fanartpath></fanartpath>
+			<trailerpath></trailerpath>
+			<custompath></custompath>
+			<romext></romext>
+			<platform>Linux</platform>
+			<thumb>special://userdata/addon_data/plugin.program.advanced.launcher/thumbs/GoogleCast.png</thumb>
+			<fanart></fanart>
+			<genre></genre>
+			<release></release>
+			<publisher></publisher>
+			<launcherplot></launcherplot>
+			<finished>false</finished>
+			<minimize>false</minimize>
+			<lnk></lnk>
+			<roms>
+			</roms>
+		</launcher>
+		<launcher>
 			<id>4de7b2deb3a1defb981859e8bf8c37a8</id>
 			<name>Steam</name>
-			<category>46979bb42fb0f2c8c29a622c8c3151a8</category>
+			<category>default</category>
 			<application>/usr/bin/kodi-openbox-runprogram</application>
 			<args>steam -bigpicture</args>
 			<rompath></rompath>
@@ -59,7 +75,7 @@
 			<custompath></custompath>
 			<romext></romext>
 			<platform>Linux</platform>
-			<thumb>special://userdata/addon_data/plugin.program.advanced.launcher/thumbs/Steam.png</thumb>
+			<thumb>special://userdata/addon_data/plugin.program.advanced.launcher/thumbs/Steam.jpg</thumb>
 			<fanart></fanart>
 			<genre></genre>
 			<release></release>
