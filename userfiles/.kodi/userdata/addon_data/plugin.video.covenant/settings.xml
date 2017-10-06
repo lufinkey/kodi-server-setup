@@ -1,0 +1,5 @@
+<settings>
+	<setting id="autoplay.sd" value="true" />
+	<setting id="hosts.captcha" value="false" />
+	<setting id="hosts.mode" value="2" />
+</settings>
