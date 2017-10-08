@@ -2,3 +2,4 @@ http://mirrors.kodi.tv/addons/krypton/weather.yahoo/weather.yahoo-4.3.1.zip
 https://raw.githubusercontent.com/Colossal1/repository.colossus/master/repository.colossus/repository.colossus-999.999.6.zip
 https://github.com/Colossal1/plugin.video.covenant/archive/master.zip
 https://raw.githubusercontent.com/kodil/kodil/master/repo/plugin.program.advanced.launcher/plugin.program.advanced.launcher-2.6.1.zip
+https://github.com/lufinkey/script.linux.nm/archive/master.zip
