@@ -162,14 +162,14 @@ apt-get install -y $(cat "lists/post-setup-install.txt")
 # Download/install my repos
 cd "$tmp_dir"
 git clone https://github.com/lufinkey/kodi-openbox
-git clone https://github.com/lufinkey/wifi-password
+git clone https://github.com/lufinkey/random-tools
 # Install kodi-openbox
 cd "$tmp_dir/kodi-openbox"
 ./build.sh
 dpkg -i kodi-openbox.deb
-# Install wifi-password
+# Install random-tools
 cd "$tmp_dir/wifi-password"
-cp "wifi-password" "/usr/local/bin/wifi-password"
+./install.sh
 cd "$full_base_dir"
 
 # Install packages with prompts
