@@ -168,7 +168,7 @@ cd "$tmp_dir/kodi-openbox"
 ./build.sh
 dpkg -i kodi-openbox.deb
 # Install random-tools
-cd "$tmp_dir/wifi-password"
+cd "$tmp_dir/random-tools"
 ./install.sh
 cd "$full_base_dir"
 
