@@ -5,7 +5,7 @@ script_user=$(whoami)
 if [ "$script_user" != "$KODI_USERNAME" ]
 then
 	echo "running $0 as user $KODI_USERNAME"
-	sudo -u "$KODI_USERNAME" "$0"
+	sudo -u "$KODI_USERNAME" KODI_USERNAME="$KODI_USERNAME" KODI_USER_HOME="$KODI_USER_HOME" "$0"
 	exit
 fi
 
