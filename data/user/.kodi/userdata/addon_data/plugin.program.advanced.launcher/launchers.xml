@@ -63,6 +63,31 @@
 			</roms>
 		</launcher>
 		<launcher>
+			<id>3ca1d162c078dbce5e3e77b66e3d1f32</id>
+			<name>Netflix</name>
+			<category>default</category>
+			<application>/usr/bin/kodi-openbox-runprogram</application>
+			<args>google-chrome https://netflix.com --start-fullscreen</args>
+			<rompath></rompath>
+			<thumbpath></thumbpath>
+			<fanartpath></fanartpath>
+			<trailerpath></trailerpath>
+			<custompath></custompath>
+			<romext></romext>
+			<platform>Linux</platform>
+			<thumb>special://userdata/addon_data/plugin.program.advanced.launcher/thumbs/Netflix.png</thumb>
+			<fanart></fanart>
+			<genre></genre>
+			<release></release>
+			<publisher></publisher>
+			<launcherplot></launcherplot>
+			<finished>false</finished>
+			<minimize>false</minimize>
+			<lnk></lnk>
+			<roms>
+			</roms>
+		</launcher>
+		<launcher>
 			<id>4de7b2deb3a1defb981859e8bf8c37a8</id>
 			<name>Steam</name>
 			<category>default</category>
