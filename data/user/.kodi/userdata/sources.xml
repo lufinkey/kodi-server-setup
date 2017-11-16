@@ -18,5 +18,10 @@
             <path pathversion="1">special://home/../Downloads/kodi-addons</path>
             <allowsharing>true</allowsharing>
         </source>
+        <source>
+            <name>root</name>
+            <path pathversion="1">/</path>
+            <allowsharing>true</allowsharing>
+        </source>
     </files>
 </sources>
