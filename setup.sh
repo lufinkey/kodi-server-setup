@@ -118,7 +118,10 @@ scripts=(*)
 cd "$KODI_SETUP_HOME"
 for script in "${scripts[@]}"
 do
+	echo ""
+	echo ""
 	echo "running script \"$script\""
+	echo ""
 	"./scripts/$script"
 done
 
