@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Setup ddclient
-read -p "Enter your Dynamic DNS password: " -s ddclient_pass
-ddclient_conf=$(
+read -p "Enter your Dynamic DNS password (or hit ENTER to skip): " -s ddclient_pass
+if [ -n "$ddclient_pass" ]
+then
+	ddclient_conf=$(
 	cat <<EOF
 
 use=web, web=dynamicdns.park-your-domain.com/getip
@@ -13,10 +15,11 @@ password=${ddclient_pass}
 @, rss-bridge
 EOF
 )
-echo "$ddclient_conf" > "/etc/ddclient.conf"
-chmod 600 "/etc/ddclient.conf"
-sudo apt-get install -y ddclient
-ddclient
+	echo "$ddclient_conf" > "/etc/ddclient.conf"
+	chmod 600 "/etc/ddclient.conf"
+	sudo apt-get install -y ddclient
+	ddclient
+fi
 
 # lightdm display setup
 mkdir -p "/etc/lightdm/scripts"
