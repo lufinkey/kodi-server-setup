@@ -28,7 +28,7 @@ trap "onkill" SIGINT SIGTERM SIGQUIT
 # cd into script directory
 base_dir=$(dirname "${BASH_SOURCE[0]}")
 cd "$base_dir"
-export KODI_SETUP_HOME="$base_dir"
+export KODI_SETUP_HOME="$PWD"
 
 
 
