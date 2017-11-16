@@ -16,3 +16,4 @@ apache2
 libapache2-mod-php
 php-mbstring
 google-chrome-stable
+python-pip
