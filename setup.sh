@@ -86,7 +86,7 @@ then
 	echo "the user \"$username\" does not exist"
 	exit 1
 fi
-userhome=$(getent passwd "$KODI_USERNAME" | cut -d: -f6)
+userhome=$(getent passwd "$username" | cut -d: -f6)
 if [ ! -d "$userhome" ]
 then
 	echo "User home directory $userhome does not exist. Exiting..."
