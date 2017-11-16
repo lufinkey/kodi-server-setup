@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# ensure script is run as kodi user
+script_user=$(whoami)
+if [ "$script_user" != "$KODI_USERNAME" ]
+then
+	echo "running $0 as user $KODI_USERNAME"
+	sudo -u "$KODI_USERNAME" "$0"
+	exit
+fi
+
+# enter user home
+cd "$KODI_USER_HOME"
+
 # fix screen sleep
 gsettings set org.gnome.desktop.session idle-delay 0
 gsettings set org.gnome.desktop.screensaver lock-enabled false
@@ -28,6 +40,7 @@ then
 	echo "    - install Google Cast for Education extension"
 	echo "    - launch and configure Google Cast for Education"
 	echo "    - close chrome"
+	read -n 1 -s -p "Press any key to launch google chrome..."
 	google-chrome "https://chrome.google.com/webstore/detail/google-cast-for-education/bnmgbcehmiinmmlmepibeeflglhbhlea?hl=en-US" &> /dev/null
 	touch ~/.config/google-chrome/.kodi_setup_done
 fi
