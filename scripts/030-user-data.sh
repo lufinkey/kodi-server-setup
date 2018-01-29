@@ -17,4 +17,3 @@ then
 	cp -f -r -p "$KODI_SETUP_TMP/profile_userfiles/." "$KODI_USER_HOME"
 	rm -rf "$KODI_SETUP_TMP/profile_userfiles"
 fi
-

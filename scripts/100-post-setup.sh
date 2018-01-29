@@ -6,4 +6,3 @@ then
 	cd "$KODI_SETUP_PROFILE_HOME"
 	"./post-setup.sh"
 fi
-

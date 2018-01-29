@@ -44,4 +44,3 @@ then
 	google-chrome "https://chrome.google.com/webstore/detail/google-cast-for-education/bnmgbcehmiinmmlmepibeeflglhbhlea?hl=en-US" &> /dev/null
 	touch ~/.config/google-chrome/.kodi_setup_done
 fi
-

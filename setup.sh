@@ -138,4 +138,3 @@ echo ""
 echo "Setup is finished!"
 echo "Kodi addons have been downloaded to $userhome/Downloads/kodi-addons"
 echo "To install them, run kodi and go to Add-ons > the package icon > Install From Zip > Kodi Addon Downloads and install each addon zip in numerical order"
-

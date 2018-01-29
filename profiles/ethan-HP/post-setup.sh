@@ -31,4 +31,3 @@ display-setup-script=/etc/lightdm/scripts/lightdm-display-setup.sh
 EOF
 )
 echo "$display_setup_conf" > "/etc/lightdm/lightdm.conf.d/51-display-setup.conf"
-

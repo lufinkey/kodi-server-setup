@@ -9,4 +9,3 @@ autologin-session=kodi-openbox
 EOF
 )
 echo "$autologin_conf" > /etc/lightdm/lightdm.conf.d/50-autologin.conf
-
