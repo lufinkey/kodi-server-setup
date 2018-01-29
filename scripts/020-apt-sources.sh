@@ -15,12 +15,14 @@ do
 done
 
 # install sources
-cd "data/apt-sources"
-apt_sources=(*)
-cd "$KODI_SETUP_HOME"
-for apt_source in "${apt_sources[@]}"
-do
-	cp -f "data/apt-sources/$apt_source" "/etc/apt/sources.list.d/$apt_source"
-done
-apt-get update
-
+if [ -d "data/apt-sources" ]
+then
+	cd "data/apt-sources"
+	apt_sources=(*)
+	cd "$KODI_SETUP_HOME"
+	for apt_source in "${apt_sources[@]}"
+	do
+		cp -f "data/apt-sources/$apt_source" "/etc/apt/sources.list.d/$apt_source"
+	done
+	apt-get update
+fi

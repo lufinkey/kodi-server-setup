@@ -66,6 +66,8 @@ then
 			exit 1
 		else
 			profile=${profiles[$profile_index]}
+			export KODI_SETUP_PROFILE="$profile"
+			export KODI_SETUP_PROFILE_HOME="$KODI_SETUP_HOME/profiles/$profile"
 		fi
 	else
 		profile=
@@ -73,8 +75,6 @@ then
 else
 	profile=
 fi
-export KODI_SETUP_PROFILE="$profile"
-export KODI_SETUP_PROFILE_HOME="$KODI_SETUP_HOME/profiles/$profile"
 
 
 

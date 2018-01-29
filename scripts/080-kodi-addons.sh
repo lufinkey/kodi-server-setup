@@ -17,4 +17,3 @@ do
 	addon_counter=$(($addon_counter+1))
 done
 chown -R "$KODI_USERNAME:$KODI_USERNAME" "$kodi_addon_downloads"
-
