@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ping -c1 google.com &> /dev/null
+result=$?
+
+if [ $result -ne 0 ]
+then
+	service NetworkManager restart
+fi
