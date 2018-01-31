@@ -1,0 +1,3 @@
+
+# Run the restart fix every minute to ensure the connection hasn't dropped
+* * * * * root router-restart-fix
