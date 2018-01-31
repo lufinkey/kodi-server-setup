@@ -16,7 +16,7 @@ mkdir -p "$kodi_addon_downloads"
 # download kodi addons
 cd "$kodi_addon_downloads"
 addon_counter=0
-for addon_url in $addon_urls
+for addon_url in $addon_urls $profile_addon_urls
 do
 	wget -N "$addon_url" -O "$addon_counter.zip"
 	addon_counter=$(($addon_counter+1))
