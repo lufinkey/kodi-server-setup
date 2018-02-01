@@ -128,7 +128,7 @@ done
 
 
 # Upgrade packages
-apt-get upgrade
+apt-get upgrade -y
 
 # Cleanup
 rm -rf "$tmp_dir"
