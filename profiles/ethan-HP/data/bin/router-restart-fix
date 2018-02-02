@@ -1,9 +1,13 @@
 #!/bin/bash
 
-ping -c1 google.com &> /dev/null
+echo "running router restart fix"
+
+ping -c1 google.com
 result=$?
 
 if [ $result -ne 0 ]
 then
+	echo "attempting NetworkManager restart"
 	service NetworkManager restart
 fi
+
