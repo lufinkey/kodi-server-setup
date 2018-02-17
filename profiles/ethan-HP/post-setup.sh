@@ -21,13 +21,5 @@ EOF
 	ddclient
 fi
 
-# lightdm display setup
-mkdir -p "/etc/lightdm/scripts"
-cp "data/misc/lightdm-display-setup.sh" "/etc/lightdm/scripts/lightdm-display-setup.sh"
-display_setup_conf=$(
-	cat <<EOF
-[SeatDefaults]
-display-setup-script=/etc/lightdm/scripts/lightdm-display-setup.sh
-EOF
-)
-echo "$display_setup_conf" > "/etc/lightdm/lightdm.conf.d/51-display-setup.conf"
+set-default-xrandr-output HDMI-0
+
