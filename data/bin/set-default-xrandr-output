@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Ensure root
+if [[ $EUID > 0 ]]
+then
+	echo "please run this script as root/sudo"
+	exit 1
+fi
+
+# check for arguments
+if [ -z "$1" ]
+then
+	>&2 echo "no input given"
+	exit 1
+fi
+
+# echo output name to file
+echo "$1" > /etc/xrandr_default_display
+chmod 644 /etc/xrandr_default_display
+chown root:root /etc/xrandr_default_display
+
+# create lightdm script
+display_setup_script=$(cat <<EOF
+#!/bin/bash
+default_display=$(cat /etc/xrandr_default_display)
+if [ -n "$default_display" ]
+then
+	display_connected=$(xrandr | grep "^$default_display connected")
+	if [ -n "$display_connected" ]
+	then
+		if [ "$default_display" != "LVDS" ]
+		then
+			xrandr --output LVDS --off
+		fi
+		xrandr --output "$default_diplay" --primary --auto
+	fi
+fi
+EOF
+)
+mkdir -p "/etc/lightdm/scripts"
+echo "$display_setup_script" > "/etc/lightdm/scripts/lightdm-display-setup.sh"
+
+# create lightdm conf
+display_setup_conf=$(cat <<EOF
+[SeatDefaults]
+display-setup-script=/etc/lightdm/scripts/lightdm-display-setup.sh
+EOF
+)
+echo "$display_setup_conf" > "/etc/lightdm/lightdm.conf.d/51-display-setup.conf"
+
+# run lightdm script
+/etc/lightdm/scripts/lightdm-display-setup.sh
