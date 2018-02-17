@@ -22,17 +22,18 @@ chown root:root /etc/xrandr_default_display
 # create lightdm script
 display_setup_script=$(cat <<EOF
 #!/bin/bash
-default_display=$(cat /etc/xrandr_default_display)
-if [ -n "$default_display" ]
+default_display=\$(cat /etc/xrandr_default_display)
+if [ -n "\$default_display" ]
 then
-	display_connected=$(xrandr | grep "^$default_display connected")
-	if [ -n "$display_connected" ]
+	display_connected=\$(xrandr | grep "^\$default_display connected")
+	if [ -n "\$display_connected" ]
 	then
-		if [ "$default_display" != "LVDS" ]
+		if [ "\$default_display" != "LVDS" ]
 		then
 			xrandr --output LVDS --off
 		fi
-		xrandr --output "$default_diplay" --primary --auto
+		echo "setting default display to \$default_display"
+		xrandr --output "\$default_display" --primary --auto
 	fi
 fi
 EOF
