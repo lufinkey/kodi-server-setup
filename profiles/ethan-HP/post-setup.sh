@@ -21,5 +21,5 @@ EOF
 	ddclient
 fi
 
-set-default-xrandr-output HDMI-0
+set-default-xrandr-output VGA-0
 
